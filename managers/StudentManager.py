@@ -35,7 +35,7 @@ class StudentManager:
         dept_scores = []
         for s in self.students:
             if s.department.lower() == department.lower() and s.scores:
-                dept_scores.extend(s.scores.values())
+                dept_scores = s.scores.values()
         if not dept_scores:
             return 0
         return sum(dept_scores) / len(dept_scores)
